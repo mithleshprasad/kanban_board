@@ -1,0 +1,58 @@
+/* Light mode (default) */
+body.light {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.125);
+}
+
+/* Dark mode */
+body.dark {
+  --bg-color: #212529;
+  --text-color: #f8f9fa;
+  --card-bg: #343a40;
+  --card-border: #454d55;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* Apply theme to Bootstrap components */
+body.dark .card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--text-color);
+}
+
+body.dark .modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+body.dark .form-control,
+body.dark .form-select {
+  background-color: #495057;
+  color: var(--text-color);
+  border-color: #6c757d;
+}
+
+body.dark .table {
+  color: var(--text-color);
+}
+
+/* Login/Register forms */
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
