@@ -24,7 +24,17 @@ app.use(session({
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
   } 
 }));
+app.use(cors({
+//   origin: 'http://localhost:3000',
+//   credentials: true
+// }));
 
+// app.use(session({
+//   secret: 'your-secret-key',
+//   resave: false,
+//   saveUninitialized: false,
+//   cookie: { secure: false } 
+// }));
 // Database connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
