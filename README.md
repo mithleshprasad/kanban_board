@@ -1,9 +1,5 @@
 # Kanban Board Application
 
-![Kanban Board Demo](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo1.jpeg)
-![Kanban Board Demo](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo2.jpeg)
-![Kanban Board Demo](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo3.jpeg)
-
 ## Table of Contents
 1. [Backend Setup](#backend-setup)
 2. [Frontend Setup](#frontend-setup)
