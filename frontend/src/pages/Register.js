@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -15,7 +16,7 @@ const Register = () => {
     try {
       await axios.post(
         'http://localhost:5000/api/auth/register',
-        { username, password },
+        { username, password, email },
         { withCredentials: true }
       );
       setSuccess('Registration successful! Please login.');
@@ -39,6 +40,15 @@ const Register = () => {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="text"
+             value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </Form.Group>
