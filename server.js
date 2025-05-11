@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://thunderous-dragon-a6e31d.netlify.app',
   credentials: true
 }));
 
@@ -19,7 +19,7 @@ app.use(session({
   secret: 'mithdffhj44848485858858jdjdjdjtrtgfre',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false } 
+  cookie: { secure: true } 
 }));
 
 
