@@ -1,5 +1,9 @@
 # Kanban Board Application
 
+![Kanban Board Demo](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo1.jpeg)
+![Kanban Board Demo](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo2.jpeg)
+![Kanban Board Demo](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo3.jpeg)
+
 ## Table of Contents
 1. [Backend Setup](#backend-setup)
 2. [Frontend Setup](#frontend-setup)
@@ -7,8 +11,7 @@
 4. [API Endpoints](#api-endpoints)
 5. [Deployment](#deployment)
 6. [Technologies Used](#technologies-used)
-
----
+7. [Screenshots](#screenshots)
 
 ## Backend Setup
 
@@ -74,7 +77,7 @@ The application will open in your default browser at `http://localhost:3000`.
 ## Environment Variables
 
 ### Backend (.env)
-```
+```env
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/kanban?retryWrites=true&w=majority
 SESSION_SECRET=your-secret-key-here
 CORS_ORIGIN=http://localhost:3000
@@ -83,7 +86,7 @@ NODE_ENV=development
 ```
 
 ### Frontend (.env)
-```
+```env
 REACT_APP_API_BASE_URL=http://localhost:5000/api
 ```
 
@@ -119,7 +122,7 @@ REACT_APP_API_BASE_URL=http://localhost:5000/api
 ### Backend Deployment
 1. Set up a MongoDB Atlas database
 2. Configure production environment variables:
-   ```
+   ```env
    NODE_ENV=production
    CORS_ORIGIN=https://your-frontend-url.com
    ```
@@ -149,4 +152,17 @@ REACT_APP_API_BASE_URL=http://localhost:5000/api
 - React Router for navigation
 - Axios for API calls
 - Context API or Redux for state management
-- React bootstrap or styled-components for styling
+- React Bootstrap or styled-components for styling
+
+---
+
+## Screenshots
+
+### Demo 1: Board Overview
+![Board Overview](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo1.jpeg)
+
+### Demo 2: Task Management
+![Task Management](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo2.jpeg)
+
+### Demo 3: Mobile View
+![Mobile View](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo3.jpeg)
