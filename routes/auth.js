@@ -5,17 +5,25 @@ const User = require('../models/User');
 // Register
 router.post('/register', async (req, res) => {
   try {
-    const { username, password } = req.body;
-    
-    // Check if user exists
+    const { username, email, password } = req.body;
+    console.log(username, email, password)
+    // Check if username exists
     const existingUser = await User.findOne({ username });
     if (existingUser) {
       return res.status(400).json({ message: 'Username already exists' });
     }
-
+    
+    // Check if email exists
     console.log(existingUser)
-    const user = new User({ username, password });
+    const existingEmail = await User.findOne({ email });
+    if (existingEmail) {
+      return res.status(400).json({ message: 'Email already exists' });
+    }
+    // Create new user
+    const user = new User({ username, email, password });
     await user.save();
+    
+    // Set session
     req.session.userId = user._id;
     
     res.status(201).json({ message: 'User created successfully', user });
@@ -23,12 +31,11 @@ router.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Server error', error });
   }
 });
-
 router.post('/login', async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
