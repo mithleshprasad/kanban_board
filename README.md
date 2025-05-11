@@ -160,5 +160,5 @@ REACT_APP_API_BASE_URL=http://localhost:5000/api
 ### Demo 2: Task Management
 ![Task Management](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo2.jpeg)
 
-### Demo 3: Mobile View
+### Demo 3: Task Management 1
 ![Mobile View](https://raw.githubusercontent.com/mithleshprasad/kanban_board/main/demo3.jpeg)
