@@ -19,7 +19,7 @@ app.use(session({
   secret: 'mithdffhj44848485858858jdjdjdjtrtgfre',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: true } 
+  cookie: { secure: false } 
 }));
 
 
