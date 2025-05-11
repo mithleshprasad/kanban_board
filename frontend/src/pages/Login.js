@@ -7,6 +7,8 @@ import { ThemeContext } from '../App';
 const Login = ({ onLogin }) => {
     const { theme } = useContext(ThemeContext);
   const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+  
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -16,7 +18,7 @@ const Login = ({ onLogin }) => {
     try {
       const response = await axios.post(
         'http://localhost:5000/api/auth/login',
-        { username, password },
+        { username, password ,email},
         { withCredentials: true }
       );
       onLogin();
@@ -33,11 +35,11 @@ const Login = ({ onLogin }) => {
       {error && <Alert variant="danger">{error}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-          <Form.Label>Username</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </Form.Group>
