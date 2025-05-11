@@ -149,4 +149,4 @@ REACT_APP_API_BASE_URL=http://localhost:5000/api
 - React Router for navigation
 - Axios for API calls
 - Context API or Redux for state management
-- CSS/SCSS or styled-components for styling
+- React bootstrap or styled-components for styling
