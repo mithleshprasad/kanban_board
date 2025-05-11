@@ -16,21 +16,21 @@ app.use(cors({
 }));
 
 app.use(session({
-  secret: 'your-secret-key',
+  secret: 'mithdffhj44848485858858jdjdjdjtrtgfre',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false } // Set secure: true in production with HTTPS
+  cookie: { secure: true } 
 }));
 
-// Database connection
-mongoose.connect('mongodb+srv://technomithlesh123:NDFkj7UdCYomTMai@cluster0.xeetirp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+
+
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 })
-.then(() => console.log('Connected to MongoDB'))
+.then(() => console.log('MongoDB connected successfully'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Routes
 const authRoutes = require('./routes/auth');
 const boardRoutes = require('./routes/boards');
 const taskRoutes = require('./routes/tasks');
@@ -39,6 +39,5 @@ app.use('/api/auth', authRoutes);
 app.use('/api/boards', boardRoutes);
 app.use('/api/tasks', taskRoutes);
 
-// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
